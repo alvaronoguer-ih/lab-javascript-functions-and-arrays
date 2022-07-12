@@ -73,9 +73,6 @@ function sum(mixNumbers) {
   } else if (typeof element === 'string') {
         big = element.length;
         suma += big;
-  } else if (typeof element === 'object' || 'array') {
-    throw "error";
-
   }
       })
 
@@ -172,13 +169,20 @@ const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating
 
 function doesWordExist(arrayX, word) {
   let wordToSearch = word;
-  
+
+  if (arrayX.length = 0) {
   if (arrayX.indexOf(wordToSearch) != -1) {
       return true;
     } else {
       return false;
     }
 
+
+} else {
+
+  return null;
+
+}
 
 }
 
@@ -203,6 +207,7 @@ const wordsCount = [
 function howManyTimes(arrayX, word) {
   let contador = 0;
 
+  if (wordsCount.length != 0) {
   arrayX.forEach(element => {
     if (element == word) {
       contador++;
@@ -212,7 +217,11 @@ function howManyTimes(arrayX, word) {
 
   return contador;
 
-} 
+} else {
+  return null;
+}
+
+}
 
 
 
